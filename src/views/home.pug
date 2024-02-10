@@ -1,6 +1,11 @@
-doctype html 
-html(lang="en")
- head 
-  title Youtube 
- body 
-  h1 Welcome to the website 
+extend base.pug
+include mixins/video
+
+block content
+ h2 welcom here! you can see trending videos
+ ul
+  each potato in videos 
+   +video(potato)
+  else 
+   li sorry nothing found 
+   
